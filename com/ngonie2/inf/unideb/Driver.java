@@ -72,7 +72,7 @@ public class Driver {
         data.getRooms().forEach(x-> System.out.println("Room No. "+x.getNumber()+", max seating capacity: "+x.getSeatingCapacity()));
         
         System.out.println("\nAvailable Lecturers ->");
-        data.getLecturers().forEach(x-> System.out.println("Lecturer id: "+x.getId()+", name: "+x.getName()));
+        data.getLecturers().forEach(x-> System.out.println("Lecturer Id: "+x.getId()+", name: "+x.getName()));
         
         System.out.println("\nAvailable Meeting Times ->");
         data.getMeetingTime().forEach(x-> System.out.println("Time Id: "+x.getId()+", meeting Time: "+x.getTime()));
@@ -83,7 +83,7 @@ public class Driver {
     private void printScheduleAsTable(Schedule schedule, int generation){
         ArrayList<Class> classes = schedule.getClasses();
         System.out.print("\n                        ");
-        System.out.println("Class No. |  Department  |  Course (number, max No. of students) |  Room (Capacity)  |   Lecturer (Id)       |  Meeting Time (Id)");
+        System.out.println("Class No. |  Department  |  Course (number, max No. of students) |  Room (Capacity)  |   Lecturer (Id)      |  Meeting Time (Id)");
         System.out.print("                       "); 
         System.out.print("-------------------------------------------------------------------------------------");
         System.out.println("------------------------------------------------------------");
@@ -97,9 +97,9 @@ public class Driver {
             System.out.print(String.format("       %1$4d  ", classNumb)+ "    | ");
             System.out.print(String.format(" %1$5s ", data.getDepartment().get(majorIndex).getName())+"| ");
             System.out.print(String.format("%1$26s ", data.getCourses().get(courseIndex).getName()+ " ("+data.getCourses().get(courseIndex).getNumber()+", "+x.getCourse().getMaxNumberOfStudnets())+")          |   ");
-            System.out.print(String.format("%1$10s", data.getRooms().get(roomsIndex).getNumber() + " ("+x.getRoom().getSeatingCapacity()) + ")     |  ");
+            System.out.print(String.format("%1$10s",data.getRooms().get(roomsIndex).getNumber() + " ("+x.getRoom().getSeatingCapacity()) + ")     |  ");
             System.out.print(String.format("%1$18s ", data.getLecturers().get(lecturerIndex).getName()+ " ("+data.getLecturers().get(lecturerIndex).getId())+")|");
-            System.out.print(String.format(" %1$20s ",data.getMeetingTime().get(meetingTimeIndex).getTime()+" ("+data.getMeetingTime().get(meetingTimeIndex).getId()+")"));
+            System.out.print(String.format(" %1$20s ", data.getMeetingTime().get(meetingTimeIndex).getTime()+" ("+data.getMeetingTime().get(meetingTimeIndex).getId()+")"));
             System.out.println("");
             classNumb++;
         });
