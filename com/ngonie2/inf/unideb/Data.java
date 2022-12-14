@@ -30,7 +30,7 @@ public class Data {
     }
     
     private Data initialize(){
-        Room room1 = new Room("IK204", 25);
+        Room room1 = new Room("IK204",25);
         Room room2 = new Room("TEOK1",45);
         Room room3 = new Room("ME251",35);
         rooms = new ArrayList<>(Arrays.asList(room1, room2, room3));
@@ -48,11 +48,11 @@ public class Data {
         lecturers = new ArrayList<>(Arrays.asList(lecturer1, lecturer2, lecturer3, lecturer4));
         
         Course course1 = new Course("C1", "INBMA17L-01", new ArrayList<>(Arrays.asList(lecturer1, lecturer2)), 25);
-        Course course2 = new Course("C2", "INBMA995-16", new ArrayList<>(Arrays.asList(lecturer1, lecturer2, lecturer3)), 35);
-        Course course3 = new Course("C3", "INBMA55L-21", new ArrayList<>(Arrays.asList(lecturer4, lecturer3)), 25);
-        Course course4 = new Course("C4", "INBMA231-22", new ArrayList<>(Arrays.asList(lecturer2, lecturer1)), 30);
-        Course course5 = new Course("C5", "INBMA34E-19", new ArrayList<>(Arrays.asList(lecturer3)), 35);
-        Course course6 = new Course("C6", "INBMA665-77", new ArrayList<>(Arrays.asList(lecturer1, lecturer2)), 45);
+        Course course2 = new Course("C2", "INBMA99S-16", new ArrayList<>(Arrays.asList(lecturer1, lecturer2, lecturer3)), 35);
+        Course course3 = new Course("C3", "INBMA58S-21", new ArrayList<>(Arrays.asList(lecturer4, lecturer3)), 25);
+        Course course4 = new Course("C4", "INBMA23L-22", new ArrayList<>(Arrays.asList(lecturer2, lecturer1)), 30);
+        Course course5 = new Course("C5", "INBMA34P-19", new ArrayList<>(Arrays.asList(lecturer3)), 35);
+        Course course6 = new Course("C6", "INBMA66S-77", new ArrayList<>(Arrays.asList(lecturer1, lecturer2)), 45);
         Course course7 = new Course("C7", "INBMA89L-66", new ArrayList<>(Arrays.asList(lecturer3, lecturer4)), 45);
         courses = new ArrayList<>(Arrays.asList(course1, course2, course3, course4, course5, course6, course7));
         

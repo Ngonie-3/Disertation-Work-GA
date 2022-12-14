@@ -10,9 +10,9 @@ package com.ngonie1.inf.unideb;
  * @author ngoni
  */
 public class Class {
-    private int classId;
-    private Department department;
-    private Course course;
+    private final int classId;
+    private final Department department;
+    private final Course course;
     private Lecturer lecturer;
     private MeetingTime meetingTime;
     private Room room;
@@ -61,6 +61,6 @@ public class Class {
 
     @Override
     public String toString() {
-        return "["+department.getName()+", "+course.getNumber()+","+lecturer.getId()+","+meetingTime.getId()+"]";
+        return "["+department.getName()+", "+course.getNumber()+", "+room.getNumber()+","+lecturer.getId()+","+meetingTime.getId()+"]";
     }
 }

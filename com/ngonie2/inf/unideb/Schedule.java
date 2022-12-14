@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class Schedule {
 
-    private ArrayList<Class> classes;
+    private final ArrayList<Class> classes;
     private int classNumb = 0;
     private int numbOfConflicts = 0;
     private boolean isFitnessChanged = true;

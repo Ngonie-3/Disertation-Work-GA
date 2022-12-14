@@ -14,8 +14,8 @@ import java.util.ArrayList;
 public class Course {
     private String number = null;
     private String name = null;
-    private int maxNumberOfStudnets;
-    private ArrayList<Lecturer> lecturers;
+    private final int maxNumberOfStudnets;
+    private final ArrayList<Lecturer> lecturers;
     
     public Course(String number, String name, ArrayList<Lecturer> lecturers, int maxNumberOfStudents){
         this.number = number;

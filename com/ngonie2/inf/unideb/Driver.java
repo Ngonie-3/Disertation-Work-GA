@@ -12,10 +12,6 @@ import com.ngonie1.inf.unideb.Class;
  * @author ngoni
  */
 public class Driver {
-
-    /**
-     * @param args the command line arguments
-     */
     
     public static final int POPULATION_SIZE = 9;
     public static final double MUTATION_RATE = 0.1;
@@ -31,12 +27,12 @@ public class Driver {
         ucsp.data = new Data();
         int generationNumber = 0;
         ucsp.printAvailableData();
-        System.out.println("Generation No. " +generationNumber);
+        System.out.println("#Generation No. " +generationNumber);
         System.out.print("Schedule Number   |                                  ");
-        System.out.print("                        Classes [dept,class,room,lecturer,metting-time]   ");
-        System.out.println("                                             " + "                         | Fitness  | Conflicts");
+        System.out.print("                        Classes [dept,course,room,lecturer,metting-time]   ");
+        System.out.println("                                             " + "                                                                         | Fitness  | Conflicts");
         System.out.print("-----------------------------------------------------------------------------------------------------------------");
-        System.out.println("----------------------------------------------------------------------------------------------------------");//bottom
+        System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------");//bottom
         GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(ucsp.data);
         Population population = new Population(Driver.POPULATION_SIZE, ucsp.data).sortByFitness();
         population.getSchedules().forEach(schedule -> System.out.println("              "+ucsp.scheduleNumb++ +"   |  "+ schedule +"  "
@@ -46,9 +42,9 @@ public class Driver {
         while (population.getSchedules().get(0).getFitness() != 1.0){
             System.out.println("#Generation No. "+ ++generationNumber);
             System.out.print("Schedule Number   |                                  ");
-            System.out.print("                        Classes [dept,class,room,lecturer,metting-time]   ");
-            System.out.println("                                         " + "                           | Fitness  | Conflicts");
-            System.out.print("----------------------------------------------------------------------------------------------------------------------------------------------------");//schedule top
+            System.out.print("                        Classes [dept,course,room,lecturer,metting-time]   ");
+            System.out.println("                                         " + "                                                                           | Fitness  | Conflicts");
+            System.out.print("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");//schedule top
             System.out.println("-------------------------------------------------------------------------");//table bottom
             population = geneticAlgorithm.evolve(population).sortByFitness();
             ucsp.scheduleNumb = 0;
@@ -76,7 +72,7 @@ public class Driver {
         
         System.out.println("\nAvailable Meeting Times ->");
         data.getMeetingTime().forEach(x-> System.out.println("Time Id: "+x.getId()+", meeting Time: "+x.getTime()));
-        System.out.print("--------------------------------------------------------------------------------------------------");
+        System.out.print("---------------------------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("-------------------------------------------------------------------------------------------------------------------------");
     }
     
@@ -104,7 +100,7 @@ public class Driver {
             classNumb++;
         });
         if(schedule.getFitness() == 1) System.out.println("#Solution found in "+(generation + 1) +" generations");
-        System.out.print("-----------------------------------------------------------------------------------");
-        System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.print("-------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------");
     }
 }

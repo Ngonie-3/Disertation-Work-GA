@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author ngoni
  */
 public class GeneticAlgorithm {
-    private Data data;
+    private final Data data;
 
     public GeneticAlgorithm(Data data) {
         this.data = data;
